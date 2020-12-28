@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 body{
-    background-color:#fff;
+    background-color:rgb(255, 255, 255);
     margin:0;
     padding:0;
     font-family:Montserrat,sans-serif;
@@ -79,6 +79,7 @@ form>div{
 }
 .salary{
     grid-area:salary
+    text-align:center
 }
 .children{
     grid-area:children
@@ -175,6 +176,7 @@ button:hover{
     .result-container .info-item{
         margin:0
     }
+
     form{
         grid-template-areas:"salary salary salary salary salary salary" "children children children children children children" "rent rent rent rent rent rent" "mortgage mortgage mortgage mortgage mortgage mortgage" "marital marital marital marital marital marital" "retired retired retired retired retired retired" "patagonico patagonico patagonico patagonico patagonico patagonico" "button button button button button button"
     }
