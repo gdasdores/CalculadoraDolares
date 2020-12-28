@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Dolares | calculaDores</title>
+
+    <h2>Calculadora de Dolares | calculaDores</h2>
+
+    <script src="./calculaDores.js"></script>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link href="calculaDores.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <p>Ingresa el monto <strong>en dolares </strong>de tu compra</p>
+    
+    <form name="input_form" action="javascript:validate();">
+        <input type="text" name="elInput" size="5" required>
+        <br><br>
+        <input type="submit" value="Calcular">
+    </form>
+    
+    <p id="output_text"/>
+
+</body>
+
+</html>
