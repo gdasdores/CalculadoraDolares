@@ -31,7 +31,7 @@ async function validate() {
         var dolarBlue = (dolarBlue1*1).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
         var dolarAhorro = (inputMoneda * (dolarOficial * 1.65)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        outputText = "<font size='+3'><strong>$" + dolarAhorro + "</font></strong><br/><br/> Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte <strong>$ " + dolarAhorro + " pesos</strong>. <br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficial + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroUnidad + " </strong>// Dólar blue: <strong>$" + dolarBlue + "</strong>.</font>";
+        outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarAhorro + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficial + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroUnidad + " </strong>// Dólar blue: <strong>$" + dolarBlue + "</strong>.</font>";
 
     }
 
