@@ -70,7 +70,7 @@ form{
     grid-template-columns:repeat(6,1fr);
     grid-template-rows:repeat(4,auto);
     grid-gap:12px;
-    grid-template-areas:". salary salary salary salary ." "children children rent rent mortgage mortgage" "marital marital retired retired patagonico patagonico" ". . button button . ."
+    grid-template-areas:". salary salary salary salary ." "children children rent  rent mortgage mortgage" "marital marital retired retired patagonico patagonico" ". . button button . ."
 }
 form>div{
     text-align:center;
@@ -78,8 +78,8 @@ form>div{
     margin:5px 0
 }
 .salary{
-    grid-area:salary
-    text-align:center
+    grid-area:salary;
+    text-align:center;
 }
 .children{
     grid-area:children
@@ -149,7 +149,9 @@ button{
     font-size:18px;
     font-weight:700;
     border:none;
-    transition:.3s
+    transition:.3s;
+    display:inline;
+    text-align: center;
 }
 button:hover{
     cursor:pointer;
