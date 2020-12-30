@@ -28,22 +28,29 @@ async function validate() {
         var today = new Date();
         var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
-        var dolarAhorroUnidad = (dolarOficial * 1.65).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        var dolarBlue = (dolarBlue1*1).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        var dolarAhorroUnidad = (dolarOficial * 1.65);
+        var dolarBlue = (dolarBlue1);
 
-        var dolarAhorro = (inputMoneda * (dolarOficial * 1.65)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        var dolarBlueCalc = (inputMoneda * dolarBlue).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        var dolarOficialFin = (dolarOficial*1).toFixed(2);
+        var dolarAhorroFin = (dolarAhorroUnidad*1).toFixed(2);
+        var dolarBlueFin = (dolarBlue1*1).toFixed(2);
+
+        var dolarAhorro = (inputMoneda * (dolarOficial * 1.65));
+        var dolarBlueCalc = (inputMoneda * dolarBlue);
         
         dondeCompra2 = String(document.getElementById("dondeCompra").options[document.getElementById("dondeCompra").selectedIndex].value);
 
         if (dondeCompra2 == "En el banco (Dólar ahorro)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarAhorro + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficial + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroUnidad + " </strong>// Dólar blue: <strong>$" + dolarBlue + "</strong>.</font>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarAhorro.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficialFin + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroFin + " </strong>// Dólar blue: <strong>$" + dolarBlueFin + "</strong>.</font>";
+          if (inputMoneda > 200) {
+            alert("Tené en cuenta que el banco no va a dejarte comprar más de $200 USD.");
+          }
         }
         else if (dondeCompra2 == "Compras online en USD (Netflix, Spotify, Apple, Amazon, etc)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarAhorro + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficial + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroUnidad + " </strong>// Dólar blue: <strong>$" + dolarBlue + "</strong>.</font>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarAhorro.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficialFin + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroFin + " </strong>// Dólar blue: <strong>$" + dolarBlueFin + "</strong>.</font>";
         }
         else if (dondeCompra2 == "Compra Informal (Blue)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarBlueCalc + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficial + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroUnidad + " </strong>// Dólar blue: <strong>$" + dolarBlue + "</strong>.</font>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'><strong>$" + dolarBlueCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</font></strong><br/><br/><font size='-2'> Cotizaciones del dólar al día <strong>" + date + " </strong>:     Dólar Oficial: <strong>$ " + dolarOficialFin + " </strong>// Dólar solidario o ahorro: <strong>$" + dolarAhorroFin + " </strong>// Dólar blue: <strong>$" + dolarBlueFin + "</strong>.</font>";
         }
         
     }
