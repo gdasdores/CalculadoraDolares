@@ -8,7 +8,6 @@
         <title>Calculadora de Dólares | calcudasDores</title>
         <div class="page-header">
             <h2><strong>Calculadora de Dólares | calcudasDores</strong></h2>
-            <br>
         </div>
 
         <script src="./calculaDores.js"></script>
@@ -31,12 +30,22 @@
             </br>
                 <p>Ingresa el monto <strong>en dólares </strong>de tu compra y presioná <strong>Calcular</strong></p>
                
-                    <form name="input_form" action="javascript:validate();">
-
+                    <form name="input_form" action="javascript:validate();">            
                         <div class="rent">
-                        <input type="text" name="elInput" size="5" required>
+                        <input type="text" name="elInput" size="2" required>
                         </div>
+                    </form>
 
+                    <div class="rent">
+                        <label for="dondeCompra">¿Dónde vas a hacer tu compra de dólares?</label>
+                        <select name="dondeCompra" id="dondeCompra">
+                            <option>En el banco (Dólar ahorro)</option>
+                            <option>Compras online en USD (Netflix, Spotify, Apple, Amazon, etc)</option>
+                            <option>Compra Informal (Blue)</option>
+                          </select>
+                        </div>
+                    <br/>
+                    <form name="input_form" action="javascript:validate();">    
                         <div class="button">
                         <input type="submit" value="Calcular">
                         </div>

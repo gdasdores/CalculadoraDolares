@@ -62,15 +62,15 @@ body{
     background:#f8f8f8;
     border-radius:6px;
     margin:16px auto;
-    padding:10px 25px;
+    padding:10px 180px;
     box-shadow:0 4px 8px 0 rgba(0,0,0,.2),0 6px 20px 0 rgba(0,0,0,.19)
 }
 form{
     display:grid;
     grid-template-columns:repeat(6,1fr);
     grid-template-rows:repeat(4,auto);
-    grid-gap:12px;
-    grid-template-areas:". salary salary salary salary ." "children children rent  rent mortgage mortgage" "marital marital retired retired patagonico patagonico" ". . button button . ."
+    grid-gap:1px;
+    grid-template-areas:". salary salary salary salary ." "children children rent rent mortgage mortgage" "marital marital retired retired patagonico patagonico" ". . button button . ."
 }
 form>div{
     text-align:center;
