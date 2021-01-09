@@ -44,22 +44,22 @@ async function validate() {
         dondeCompra2 = String(document.getElementById("dondeCompra").options[document.getElementById("dondeCompra").selectedIndex].value);
 
         if (dondeCompra2 == "En el banco (Dólar ahorro)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarAhorro.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotización al <strong>" + date + "</strong> - Dólar ahorro: <strong>$ " + dolarAhorroFin + " </strong>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarAhorro.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotización al <strong>" + date + "</strong> del dólar ahorro: </br><strong>$ " + dolarAhorroFin + " </strong>";
           if (inputMoneda > 200) {
             alert("Tené en cuenta que el banco no va a dejarte comprar más de $200 USD.");
           }
         }
         else if (dondeCompra2 == "Compras online en USD (Netflix, Spotify, Apple, Amazon, etc)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarAhorro.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotización al <strong>" + date + "</strong> - Dólar ahorro: <strong>$ " + dolarAhorroFin + " </strong>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarAhorro.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotización al <strong>" + date + "</strong> del dólar ahorro: </br><strong>$ " + dolarAhorroFin + " </strong>";
         }
         else if (dondeCompra2 == "Operaciones en la bolsa (CCL - Dólar Contado con Liqui)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarLiquiCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotizaciones al <strong>" + date + "</strong> - Dólar CCL: <strong>$ " + dolarBolsaFin + " </strong>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarLiquiCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotizaciones al <strong>" + date + "</strong> del dólar CCL: </br><strong>$ " + dolarBolsaFin + " </strong>";
         }
         else if (dondeCompra2 == "Compra de bonos en pesos y venta en dólares (MEP - Dólar Bolsa)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarBolsaCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotizaciones al <strong>" + date + "</strong> - Dólar MEP: <strong>$ " + dolarLiquiFin + " </strong>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarBolsaCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotizaciones al <strong>" + date + "</strong> del dólar MEP: </br><strong>$ " + dolarLiquiFin + " </strong>";
         }
         else if (dondeCompra2 == "Compra Informal (Dólar Blue)"){
-          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarBlueCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotizaciones al <strong>" + date + "</strong> - Dólar blue: <strong>$ " + dolarBlueFin + " </strong>";
+          outputText = "Tu compra por un total de <strong>$ " + inputMoneda.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " dólares </strong> va a costarte: <strong><br/><br/><font size='+3'>$" + dolarBlueCalc.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "</strong></font><br/><br/> Cotizaciones al <strong>" + date + "</strong> del dólar blue: </br><strong>$ " + dolarBlueFin + " </strong>";
         }
         
     }
