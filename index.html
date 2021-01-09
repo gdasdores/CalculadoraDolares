@@ -32,7 +32,7 @@
 
             <center>
             </br>
-                <p>Ingresa el monto <strong>en dólares </strong>de tu compra y presioná <strong>Calcular</strong></p>
+                <p>Ingresa el monto <strong>en dólares </strong>y presioná <strong>Calcular</strong></p>
                
                     <form name="input_form" action="javascript:validate();">            
                         <div class="rent">
@@ -45,27 +45,40 @@
                         <select name="dondeCompra" id="dondeCompra">
                             <option>En el banco (Dólar ahorro)</option>
                             <option>Compras online en USD (Netflix, Spotify, Apple, Amazon, etc)</option>
-                            <option>Compra Informal (Blue)</option>
+                            <option>Operaciones en la bolsa (CCL - Dólar Contado con Liqui)</option>
+                            <option>Compra de bonos en pesos y venta en dólares (MEP - Dólar Bolsa)</option>
+                            <option>Compra Informal (Dólar Blue)</option>
                           </select>
                         </div>
                     <br/>
-                    <form name="input_form" action="javascript:validate();">    
+                    
+                    <style>
+                        form { display: inline; }
+                    </style>
+
+                    <form name="input_form" action="javascript:validate();">
                         <div class="button">
-                        <input type="submit" value="Calcular">
+                        <input type="submit" value="Calcular" id="button1">
+                        </div>
+                    </form>
+
+                    <form name="soloVerCoti" action="javascript:soloCot();">
+                        <div class="button">
+                        <input type="submit" value="Ver Cotizaciones" id="button2">
                         </div>
                     </form>
 
                 <div class="page-header">
                 </div>
 
-                <p id="output_text" />
+                        <p id="output_text">
 
             </center>
         </div>
     </div>
 
     <footer class="footer-area">
-        <div>Hecho por <a href="https://instagram.com/gonzadasdores" title="Gonzalo das Dores">Gonzalo das Dores</a></a>
+        <div>Hecho por <a href="www.linkedin.com/in/gonzalodasdores" title="Gonzalo das Dores">Gonzalo das Dores</a></a>
         <div>Cotizaciones extraídas de <a href="https://dolarsi.com" title="DolarSi.com">DolarSi.com</a></a>
         </div>
     </footer>

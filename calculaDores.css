@@ -98,8 +98,10 @@ form>div{
 .patagonico{
     grid-area:patagonico
 }
-.button{
-    grid-area:button
+.button , .buttonB{
+    grid-area:button;
+    text-align:center;
+    display:inline-block;
 }
 .radio-label{
     font-weight:400
