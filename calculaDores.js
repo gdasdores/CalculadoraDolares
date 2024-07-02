@@ -9,7 +9,7 @@ async function validate() {
 
     inputMoneda = document.forms["input_form"]["elInput"].value;
 
-    var peticionApi = await fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales');
+    var peticionApi = await fetch('https://dolarapi.com/v1/dolares');
     var peticionApiJSON = await peticionApi.json();
 
     console.log({ peticionApiJSON });
@@ -22,12 +22,16 @@ async function validate() {
     } else {
         // calculate the result
 
-        var dolarOficial = peticionApiJSON[7].casa.venta.replace(/,/g, '.');
-        var dolarBlue1 = peticionApiJSON[1].casa.venta.replace(/,/g, '.');
-        var dolarLiqui = peticionApiJSON[3].casa.venta.replace(/,/g, '.');
-        var dolarBolsa = peticionApiJSON[4].casa.venta.replace(/,/g, '.');
+        var dolarOficial = peticionApiJSON[0].venta;
 
-        var dolarAhorroUnidad = (dolarOficial * 1.65);
+        var dolarBlue1 = peticionApiJSON[1].venta;
+  
+        var dolarLiqui = peticionApiJSON[3].venta;
+  
+        var dolarBolsa = peticionApiJSON[2].venta;
+  
+        var dolarAhorroUnidad = (dolarOficial * 1.60);
+
         var dolarAhorroFin = (dolarAhorroUnidad*1).toFixed(2);
         var dolarBlueFin = (dolarBlue1*1).toFixed(2);
         var dolarLiquiFin = (dolarLiqui*1).toFixed(2);
@@ -70,20 +74,20 @@ async function validate() {
 
 async function soloCot() {
 
-  var peticionApi = await fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales');
+  var peticionApi = await fetch('https://dolarapi.com/v1/dolares');
   var peticionApiJSON = await peticionApi.json();
 
   console.log({ peticionApiJSON });
 
-      var dolarOficial = peticionApiJSON[7].casa.venta.replace(/,/g, '.');
+      var dolarOficial = peticionApiJSON[0].venta;
 
-      var dolarBlue1 = peticionApiJSON[1].casa.venta.replace(/,/g, '.');
+      var dolarBlue1 = peticionApiJSON[1].venta;
 
-      var dolarLiqui = peticionApiJSON[3].casa.venta.replace(/,/g, '.');
+      var dolarLiqui = peticionApiJSON[3].venta;
 
-      var dolarBolsa = peticionApiJSON[4].casa.venta.replace(/,/g, '.');
+      var dolarBolsa = peticionApiJSON[2].venta;
 
-      var dolarAhorroUnidad = (dolarOficial * 1.65);
+      var dolarAhorroUnidad = (dolarOficial * 1.60);
 
       var dolarOficialFin = (dolarOficial*1).toFixed(2);
       var dolarAhorroFin = (dolarAhorroUnidad*1).toFixed(2);
