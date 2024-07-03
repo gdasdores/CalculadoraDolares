@@ -30,10 +30,10 @@
     <div class="container">
         <div class="form-area">
 
-            <center>
-            </br>
-                <p>Ingresa el monto <strong>en dólares </strong>y presioná <strong>Calcular</strong></p>
-               
+            <center><br>
+                    <p>Ingresa el monto <strong>en dólares </strong>y presioná <strong>Calcular</strong>
+                    </p>
+                        
                     <form name="input_form" action="javascript:validate();">            
                         <div class="rent">
                         <input type="text" name="elInput" size="2" required>
@@ -48,10 +48,10 @@
                             <option>Operaciones en la bolsa (CCL - Dólar Contado con Liqui)</option>
                             <option>Compra de bonos en pesos y venta en dólares (MEP - Dólar Bolsa)</option>
                             <option>Compra Informal (Dólar Blue)</option>
-                          </select>
+                            </select>
                         </div>
                     <br/>
-                    
+                        
                     <style>
                         form { display: inline; }
                     </style>
@@ -62,18 +62,38 @@
                         </div>
                     </form>
 
-                    <form name="soloVerCoti" action="javascript:soloCot();">
-                        <div class="button">
-                        <input type="submit" value="Ver Cotizaciones" id="button2">
-                        </div>
-                    </form>
+                    <div class="outputBox"><br>
+                        <p id="output_text"></p>
+                    </div>
 
-                <div class="page-header">
-                </div>
+                    <div class="page-header">
+                    </div>
 
-                        <p id="output_text">
+                    <div class="bannerCoti">
 
+                        <form name="soloVerCoti" action="javascript:soloCot();">
+                            <div class="button">
+                            <input type="submit" value="Actualizar Cotizaciones" id="button2">
+                            <script>
+                                window.onload=function(){
+                                document.getElementById("button2").click();
+                                };
+                            </script>
+                            </div>
+                        </form>
+
+                    </div>
             </center>
+            
+                    <div class="distintasCoti">
+                        <div class="cotiOfi">Oficial<br><br><p id="output_ofi"></p><br></div>
+                        <div class="cotiOfi">Blue<br><br><p id="output_blue"></p><br></div>
+                        <div class="cotiOfi">CCL<br><br><p id="output_liqui"></p><br></div>
+                        <div class="cotiOfi">MEP<br><br><p id="output_bolsa"></p><br></div>
+                        <div class="cotiOfi">Ahorro<br><br><p id="output_ahorro"></p><br></div>
+                        <!--<p style="margin-left:15%;">Cotizaciones al día <strong><p id="output_date"></p></strong></p>-->
+
+                    </div>  <br>
         </div>
     </div>
 
